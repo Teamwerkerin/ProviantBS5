@@ -1,0 +1,78 @@
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Ihr Vorschlag für einen Proviant</title>
+	<style>
+		.container {
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			justify-content: center;
+			height: 100vh;
+			background-color: #f2f2f2;
+			font-family: Arial, sans-serif;
+		}
+
+		h1 {
+			font-size: 2em;
+			margin-top: 0;
+			margin-bottom: 1em;
+			text-align: center;
+		}
+
+		p {
+			font-size: 1.2em;
+			margin-top: 0;
+			margin-bottom: 1em;
+			text-align: center;
+			max-width: 80%;
+		}
+
+		button {
+			padding: 0.5em 1em;
+			font-size: 1.2em;
+			background-color: #d7501e;
+			color: white;
+			border: none;
+			border-radius: 0.5em;
+			cursor: pointer;
+		}
+		img {
+        		width: 15.00%;
+        		height: auto;
+        		display: block;
+        		margin: 0 auto;
+    		}
+	</style>
+</head>
+<body>
+	<div class="container">
+		<h1>Ihr Vorschlag für einen Proviant</h1>
+		<p id="aufforderung-text">Klicken Sie auf den Button, um eine zufällige Aufforderung zu erhalten.</p>
+		<button onclick="generateAufforderung()">Neuer Vorschlag</button>
+		<img src="TW Logo fett & Schrift transparent.png" alt="Ein Bild" style="display: block; margin: 0 auto;">
+	</div>
+	<div id="aufforderung">
+		<script>
+    			var aufforderungen = [
+				"Nehmen Sie sich noch einmal des Themas „Psychologische Sicherheit“ an. Beobachten Sie Ihr Umfeld: Wann scheint sich wer psychologisch sicher zu fühlen? Wer wo nicht? Wie könnte dies geändert werden?",
+				"Nehmen Sie sich noch einmal des Themas „Psychologische Sicherheit“ an. Beobachten Sie sich selbst: Wann fühlen Sie sich derzeit psychologisch sicher? Wann hatten Sie dieses Gefühl in letzter Zeit nicht? Was hätte es gebraucht, um Ihnen dieses Gefühl zu geben?",
+				"Nehmen Sie sich noch einmal des Themas „Speaking-up“ an. Beobachten Sie Ihr Umfeld: Wer betreibt dies wann? Wo bleibt es aus? Wie könnte dies geändert werden?",
+				"Nehmen Sie sich noch einmal des Themas „Speaking-up“ an. Beobachten Sie sich selbst: Wann haben Sie in letzter Zeit Speaking-up betrieben? Wann wäre es Ihnen ein Bedürfnis gewesen – aber Sie haben es nicht getan? Was hätte es gebraucht, damit Sie Ihre Stimme erheben?",
+				"Nehmen Sie sich noch einmal des Themas „Radikale Ehrlichkeit“ an. Beobachten Sie Ihr Umfeld: Wer zeigt wann radikale Ehrlichkeit? Wo misslingt dies?",
+				"Nehmen Sie sich noch einmal des Themas „Radikale Ehrlichkeit“ an. Beobachten Sie sich selbst: Wann haben Sie sich in letzter Zeit radikal ehrlich geäußert? Wann wäre es Ihnen ein Bedürfnis gewesen – aber Sie haben es nicht getan? Was hätte es gebraucht, um radikal ehrlich zu sein?",
+				"Nehmen Sie sich noch einmal des Themas „Gewaltfreie Kommunikation“ an. Denken Sie an eine Situation, die Sie gerne in einem Team ansprechen möchten. Formulieren Sie Ihr Anliegen nach dem 4-Schritt.",
+ 				"Nehmen Sie sich noch einmal des Themas „Gewaltfreie Kommunikation“ an. Beobachten Sie Ihr Umfeld: Wann haben Gesprächspartner:innen nach dieser Technik kommuniziert? Wann wurden welche Schritte formuliert – und wo sind sie ausgeblieben? Welchen Effekt hatte die jeweilige Art der Gesprächsführung?",
+				"Nehmen Sie sich den „Gesprächsleitfaden für schwierige Gespräche“ aus dem Proviant-Paket vor. Denken Sie an ein anstehendes Gespräch, das Ihnen herausfordernd erscheint – oder lassen Sie ein solches Gespräch aus der Vergangenheit Revue passieren. Bereiten Sie sich mithilfe des Leitfadens (ggf. nur beispielhaft) darauf vor.",
+				"Identifizieren Sie einen Aspekt Ihrer beruflichen Arbeit, der Sie derzeit beschäftigt. Nehmen Sie sich anschließend die drei Varianten eines (kollegialen) Coachings aus dem Proviant-Paket vor. Überlegen Sie, mittels welcher Variante Sie bzgl. Ihres gewählten Aspekts Unterstützung erfahren könnten. Vielleicht möchten Sie ein kollegiales Gespräch initiieren?",
+				"Nehmen Sie sich die „14 Frageformen“ aus dem Proviant-Paket vor. Wählen Sie drei Fragen aus, die Sie in der nächsten Woche in Gespräche (z. B. mit Schüler:innen, Kolleg:innen oder Eltern) einfließen lassen möchten. Welche Wirkung beobachten Sie?"
+			];
+
+		function generateAufforderung() {
+  		var aufforderung = aufforderungen[Math.floor(Math.random() * aufforderungen.length)];
+  		document.getElementById("aufforderung-text").innerHTML = aufforderung;
+		}
+	</script>
+
+</body>
+</html>
